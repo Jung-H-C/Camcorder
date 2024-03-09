@@ -1,5 +1,6 @@
 import cv2 as cv
 import sys
+import numpy as np
 
 cap = cv.VideoCapture(0)
 
@@ -16,6 +17,7 @@ wait_msec = int(1000 / fps)
 
 out = cv.VideoWriter('record1.avi', four_cc, fps, (width, height))
 recording = False
+flip = False
 
 if not out.isOpened():
     print('File open failed')
@@ -35,7 +37,12 @@ while True:
         out.write(frame)
         cv.circle(frame, (100, 15), radius=10, color=(0, 0, 255), thickness=-1)
         cv.putText(frame, 'Recording', (10, 20), cv.FONT_HERSHEY_DUPLEX, 0.5, color=(0, 0, 255))
+    else:
+        cv.putText(frame, 'Press Space to start recording Press M to change the mode', (80, 50), cv.FONT_HERSHEY_DUPLEX, 0.5, color=(0, 0, 0), thickness = 2)
     
+    if flip:
+        frame = cv.bitwise_not(frame)
+
     cv.imshow('Camcorder', frame)
 
     if key == ord(' '):
@@ -49,8 +56,19 @@ while True:
             recording = False
             continue
     
+    elif key == ord('m') or key == ord('M'):
+        if not flip:
+            flip = True
+            continue
+        else:
+            flip = False
+            continue
+
+    
     elif key == 27:
         break
+
+
 
 cap.release()
 out.release()
