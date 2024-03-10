@@ -13,7 +13,7 @@
 'M'키를 누르면 영상 명암이 반전이 됩니다. 
 <br>
 <br>
-
+<br>
 <img width="481" alt="recording" src="https://github.com/Jung-H-C/Camcorder/assets/101037538/439456aa-dac7-4351-a26d-300af2404016">
 <br>
 <b>녹화화면</b><br>
