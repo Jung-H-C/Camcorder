@@ -15,7 +15,7 @@ fps = cap.get(cv.CAP_PROP_FPS)
 four_cc = cv.VideoWriter_fourcc(*'DIVX')
 wait_msec = int(1000 / fps)
 
-out = cv.VideoWriter('record1.avi', four_cc, fps, (width, height))
+out = cv.VideoWriter('Recording.avi', four_cc, fps, (width, height))
 recording = False
 flip = False
 
@@ -38,7 +38,8 @@ while True:
         cv.circle(frame, (100, 15), radius=10, color=(0, 0, 255), thickness=-1)
         cv.putText(frame, 'Recording', (10, 20), cv.FONT_HERSHEY_DUPLEX, 0.5, color=(0, 0, 255))
     else:
-        cv.putText(frame, 'Press Space to start recording Press M to change the mode', (80, 50), cv.FONT_HERSHEY_DUPLEX, 0.5, color=(0, 0, 0), thickness = 2)
+        cv.putText(frame, 'Press Space to start recording', (80, 50), cv.FONT_HERSHEY_TRIPLEX, 0.5, color=(0, 0, 0), thickness = 2)
+        cv.putText(frame, 'Press M to change the mode', (80, 70), cv.FONT_HERSHEY_TRIPLEX, 0.5, color=(0, 0, 0), thickness = 2)
     
     if flip:
         frame = cv.bitwise_not(frame)
