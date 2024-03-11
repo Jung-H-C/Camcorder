@@ -6,7 +6,7 @@
 
 
 <b>메인화면</b><br>
-'M'키를 눌러 모드를 변경하거나 Space bar키를 눌러 녹화를 시작할 수 있습니다. ESC키를 누르면 프로그램이 종료됩<br>니다.
+'M'키를 눌러 모드를 변경하거나 Space bar키를 눌러 녹화를 시작할 수 있습니다. ESC키를 누르면 프로그램이 종료됩니다.
 <img width="479" alt="mode" src="https://github.com/Jung-H-C/Camcorder/assets/101037538/2a3233c8-c1f0-4471-95cd-b7765bb5fcba">
 
 <b>반전모드</b><br>
