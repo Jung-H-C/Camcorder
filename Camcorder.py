@@ -34,10 +34,12 @@ while True:
         break
 
     if recording:
+        # record 화면에 표시
         out.write(frame)
         cv.circle(frame, (100, 15), radius=10, color=(0, 0, 255), thickness=-1)
         cv.putText(frame, 'Recording', (10, 20), cv.FONT_HERSHEY_DUPLEX, 0.5, color=(0, 0, 255))
     else:
+        # introduction 화면에 표시 (메인화면)
         cv.putText(frame, 'Press Space to start recording', (80, 50), cv.FONT_HERSHEY_TRIPLEX, 0.5, color=(0, 0, 0), thickness = 2)
         cv.putText(frame, 'Press M to change the mode', (80, 70), cv.FONT_HERSHEY_TRIPLEX, 0.5, color=(0, 0, 0), thickness = 2)
     
